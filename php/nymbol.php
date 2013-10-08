@@ -12,6 +12,10 @@ if(!defined('NYMBOL_CACHE_LIFESPAN')) {
 	define('NYMBOL_CACHE_LIFESPAN', 60); // Cache for one hour
 }
 
+if(!defined('NYMBOL_NON_SSL')) {
+	define('NYMBOL_NON_SSL', false); // Force SSL connection
+}
+
 class NymbolCacheAdapterBase {
 	protected function _putData($hash, $data, $death) {
 		throw new Exception('Method not implemented.');
@@ -298,7 +302,8 @@ class NymbolQuery {
 			$newURL .= implode('&', $getOpts);
 		}
 		
-		$apiURL = 'http://' . $this->_domain . '/api/manager/' . $newURL;
+		$protocol = NYMBOL_NON_SSL ? 'http://' : 'https://';
+		$apiURL = $protocol . $this->_domain . '/api/manager/' . $newURL;
 		$q = strpos($apiURL, '?');
 		
 		if($q > -1) {

@@ -122,14 +122,22 @@ $nymbol->resources->get();
 
 ## Common query options
 
-You can alsao specify the following options via the `get()` function:
+You can also specify the following options via the `get()` function:
 
 * `rpp` - The number of items per page (defaults to 100)
 * `page` - The page number, for paginating through results
 * `thumbsize` - The size of thumbnails (all taxonomy and asset related API calls can return thumbnails)
 * `thumbdensity` - The resolution of the thumbnail (`high`, `low` or `normal`)
 
+## Disabling SSL
+
+By default, all API requests are performed over SSL. You can turn this off by defining the
+``NYMBOL_NON_SSL`` constant like this:
+
+```php
+define('NYMBOL_NON_SSL', true);
+```
+
 ## To do
 
 1. Add more query options
-2. Add HTTPS as the default, with a `secure` property to return to standard HTTP
