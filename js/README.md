@@ -18,10 +18,11 @@ Currently, the Nymbol JavaScript library requires jQuery for HTTP requests.
 
 ## Getting started
 
-1. Download the nymbol.php file and put it somewhere in your project directory
-2. Visit <https://nymbol.co.uk/mobile/apps/> and create a new app
-3. Click the name of the app and copy the key and secret for use later (see the first code example below)
-4. Check out <http://nymbol.co.uk/develop/> for more documentation on the Nymbol API
+1. Download the nymbol.js file and put it somewhere in your project directory
+2. Include a `<script>` tag in your HTML pointing to the JavaScript file
+3. Visit <https://nymbol.co.uk/mobile/apps/> and create a new app
+4. Click the name of the app and copy the key and secret for use later (see the first code example below)
+5. Check out <http://nymbol.co.uk/develop/> for more documentation on the Nymbol API
 
 ## Basic usage
 
